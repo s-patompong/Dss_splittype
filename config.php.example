@@ -1,0 +1,7 @@
+<?php
+
+const DB_HOST = '127.0.0.1';
+const DB_NAME = 'ma';
+const DB_USERNAME = 'homestead';
+const DB_PASSWORD = 'secret';
+const DB_PORT = '3306';

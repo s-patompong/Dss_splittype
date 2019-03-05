@@ -1,6 +1,6 @@
 # Dss_splittype
 
-1. Run `cp config.php.dist config.php` and change content inside config.php to be your environment's settings.
+1. Run `cp config.php.example config.php` and change content inside config.php to be your environment's settings.
 
 For example
 ```php

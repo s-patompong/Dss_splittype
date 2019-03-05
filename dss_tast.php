@@ -16,7 +16,7 @@ $performance = $_GET['performance'];
 $power_status = $_GET['power_status'];
 
 // Create connection
-$conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+$conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME, DB_PORT);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: ".$conn->connect_error);
