@@ -22,8 +22,11 @@ if ($conn->connect_error) {
     die("Connection failed: ".$conn->connect_error);
 }
 
-$sql = "INSERT INTO status_airs (id,level_id,room_no,cool_temp,humidity,room_temp,volt_cool,current_cool,current_hot,wind_speed,performance,power_status) 
-VALUES ($id,$level_id,'$room_no',$cool_temp,$humidity,$room_temp,$volt_cool,$current_cool,$current_hot,$wind_speed,$performance,'$power_status');";
+// $sql = "INSERT INTO status_airs (id,level_id,room_no,cool_temp,humidity,room_temp,volt_cool,current_cool,current_hot,wind_speed,performance,power_status) 
+// VALUES ($id,$level_id,'$room_no',$cool_temp,$humidity,$room_temp,$volt_cool,$current_cool,$current_hot,$wind_speed,$performance,'$power_status');";
+
+$sql = "UPDATE `status_airs` SET `cool_temp`=$cool_temp,`humidity`=$humidity,`room_temp`=$room_temp,`volt_cool`=$volt_cool,`current_cool`=$current_cool,`current_hot`=$current_hot,`wind_speed`=$wind_speed,`performance`=$performance,`power_status`='$power_status' WHERE `id`=$id";
+
 
 if ($conn->query($sql) === true) {
     echo "save OK";
